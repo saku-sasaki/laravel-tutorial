@@ -13,3 +13,11 @@
 
 Route::get('/folders/{id}/tasks', 'TaskController@index')->name('tasks.index');
 
+// フォルダ作成機能のルーティング
+//同じ URL で HTTP メソッド違いのルートがいくつかある場合はどれか一つに名前をつければ OK。
+Route::get('/folders/create', 'FolderController@showCreateForm')->name('folders.create');
+Route::post('/folders/create', 'FolderController@create');
+
+Route::get('test', function() {
+    return view('test');
+});
