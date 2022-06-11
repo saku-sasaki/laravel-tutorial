@@ -13,6 +13,10 @@ class TaskTest extends TestCase
 {
     //テストケース毎にデータベースをリフレッシュしてマイグレーションを再実行する
     use RefreshDatabase;
+<<<<<<< HEAD
+=======
+
+>>>>>>> 86551f3 (テストケース追加)
     /**
      * 各テストケースごとにデータベースをリフレッシュしてマイグレーションを再実行する
      */
@@ -21,7 +25,11 @@ class TaskTest extends TestCase
     /**
      * 各テストメソッドの再実行前に呼ばれる
      */
+<<<<<<< HEAD
     public function setUp()
+=======
+    public function serUp():void
+>>>>>>> 86551f3 (テストケース追加)
     {
         parent::setUp();
 
@@ -29,6 +37,13 @@ class TaskTest extends TestCase
         $this->seed('FoldersTableSeeder');
     }
 
+<<<<<<< HEAD
+=======
+    /**
+     * 期限日が日付でない場合はバリデーションエラー
+     * @test
+     */
+>>>>>>> 86551f3 (テストケース追加)
     public function due_date_should_be_date()
     {
         $response = $this->post('/folders/1/tasks/create', [
